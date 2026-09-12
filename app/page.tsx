@@ -26,7 +26,7 @@ const audioRef = useRef<HTMLAudioElement>(null);
   useEffect(() => {
     const stored = sessionStorage.getItem("abigail-birthday-unlocked");
 
-    if (stored === "true") {
+     if (stored === "true") {
       setUnlocked(true);
       setShowWelcome(true);
     }
@@ -255,7 +255,7 @@ const audioRef = useRef<HTMLAudioElement>(null);
           />
 
           <h1 className="text-5xl md:text-7xl font-serif text-gray-800 mb-8">
-            Welcome, Abigail ❤️
+            Welcome, Ayomi ❤️
           </h1>
 
           <p className="text-xl text-gray-600 leading-relaxed">
@@ -317,7 +317,7 @@ const audioRef = useRef<HTMLAudioElement>(null);
             viewport={{ once: true }}
             className="text-6xl md:text-8xl font-serif text-gray-800"
           >
-            Abigail
+            Ayomi
           </motion.h1>
 
           <motion.p
@@ -378,11 +378,11 @@ const audioRef = useRef<HTMLAudioElement>(null);
       className="bg-[#FAF9F6] p-10 md:p-16 rounded-3xl shadow-sm"
     >
       <p className="text-lg leading-loose text-gray-700">
-        Dear Abigail,
+        Dear M J,
       </p>
 
       <p className="mt-8 text-lg leading-loose text-gray-700">
-        Today, the world celebrates the day you were born.
+        Today, everyone celebrates the day you were born.
       </p>
 
       <p className="mt-6 text-lg leading-loose text-gray-700">
@@ -396,6 +396,7 @@ const audioRef = useRef<HTMLAudioElement>(null);
         You have a way of bringing warmth into moments,
         laughter into conversations,
         and beauty into ordinary days.
+        Your beauty captivate.
       </p>
 
       <p className="mt-6 text-lg leading-loose text-gray-700">
@@ -404,10 +405,12 @@ const audioRef = useRef<HTMLAudioElement>(null);
         peace, answered prayers,
         beautiful surprises,
         and unforgettable joy.
+        I pray this year builds you,
+        your brand and visibility. 
       </p>
 
       <p className="mt-6 text-lg leading-loose text-gray-700">
-        Thank you for being you.
+        Thank you for being you, Abby bakes treat .
       </p>
 
       <p className="mt-10 text-xl text-[#C8A96A] font-medium">
@@ -504,7 +507,7 @@ const audioRef = useRef<HTMLAudioElement>(null);
       {[
         {
           title: "Your Heart",
-          text: "The kindness and warmth you carry with you.",
+          text: "The kindness and warmth you carry within you.",
         },
         {
           title: "Your Strength",
@@ -523,8 +526,8 @@ const audioRef = useRef<HTMLAudioElement>(null);
           text: "The calm and comfort your presence can bring.",
         },
         {
-          title: "Your Uniqueness",
-          text: "There is only one Abigail, and that's beautiful.",
+          title: "Your Beauty",
+          text: "There is only one Ayomi, and she's beautiful in and out.",
         },
       ].map((item, index) => (
         <motion.div
@@ -616,34 +619,34 @@ const audioRef = useRef<HTMLAudioElement>(null);
 
     <div className="grid md:grid-cols-3 lg:grid-cols-4 gap-6">
       {[
-  { number: 1, image: "/photo1.jpg", reason: "Your smile has a way of making difficult days feel lighter." },
-  { number: 2, image: "/photo2.jpg", reason: "You care deeply about the people you love." },
-  { number: 3, image: "/photo3.jpg", reason: "You are stronger than you give yourself credit for." },
-  { number: 4, image: "/photo4.jpg", reason: "You have a beautiful heart." },
-  { number: 5, image: "/photo5.jpg", reason: "Your laughter is genuinely contagious." },
+  { number: 1, image: "/gallery1.jpg", reason: "Your smile has a way of making difficult days feel lighter." },
+  { number: 2, image: "/gallery2.jpg", reason: "You care deeply about the people you love." },
+  { number: 3, image: "/gallery3.jpg", reason: "You are stronger than you give yourself credit for." },
+  { number: 4, image: "/gallery4.jpg", reason: "You have a beautiful heart." },
+  { number: 5, image: "/gallery6.jpg", reason: "Your laughter is genuinely contagious." },
 
-  { number: 6, image: "/photo1.jpg", reason: "You continue to grow through life's challenges." },
-  { number: 7, image: "/photo2.jpg", reason: "You make ordinary conversations feel meaningful." },
-  { number: 8, image: "/photo3.jpg", reason: "You bring warmth wherever you go." },
-  { number: 9, image: "/photo4.jpg", reason: "You inspire people more than you realize." },
-  { number: 10, image: "/photo5.jpg", reason: "You remain yourself in a world that often pressures people to change." },
+  { number: 6, image: "/gallery5.jpg", reason: "You continue to grow through life's challenges." },
+  { number: 7, image: "/gallery7.jpg", reason: "You make ordinary conversations feel meaningful." },
+  { number: 8, image: "/gallery8.jpg", reason: "You bring warmth wherever you go." },
+  { number: 9, image: "/gallery9.jpg", reason: "You inspire people more than you realize." },
+  { number: 10, image: "/gallery10.jpg", reason: "You remain yourself in a world that often pressures people to change." },
 
-  { number: 11, image: "/photo1.jpg", reason: "Your kindness leaves a lasting impact." },
-  { number: 12, image: "/photo2.jpg", reason: "You possess quiet strength." },
-  { number: 13, image: "/photo3.jpg", reason: "You make beautiful memories without even trying." },
-  { number: 14, image: "/photo4.jpg", reason: "You are worth celebrating today and every day." },
-  { number: 15, image: "/photo5.jpg", reason: "Your future is full of possibilities." },
+  { number: 11, image: "/gallery11.jpg", reason: "Your kindness leaves a lasting impact." },
+  { number: 12, image: "/gallery12.jpg", reason: "You possess quiet strength." },
+  { number: 13, image: "/gallery13.jpg", reason: "You make beautiful memories without even trying." },
+  { number: 14, image: "/gallery14.jpg", reason: "You are worth celebrating today and every day." },
+  { number: 15, image: "/gallery15.jpg", reason: "Your future is full of possibilities." },
 
-  { number: 16, image: "/photo1.jpg", reason: "You never stop learning and improving." },
-  { number: 17, image: "/photo2.jpg", reason: "You make life a little brighter." },
-  { number: 18, image: "/photo3.jpg", reason: "You have a beautiful way of seeing the world." },
-  { number: 19, image: "/photo4.jpg", reason: "You deserve every good thing coming your way." },
-  { number: 20, image: "/photo5.jpg", reason: "You are wonderfully unique." },
+  { number: 16, image: "/gallery16.jpg", reason: "You never stop learning and improving." },
+  { number: 17, image: "/gallery17.jpg", reason: "You make life a little brighter." },
+  { number: 18, image: "/gallery18.jpg", reason: "You have a beautiful way of seeing the world." },
+  { number: 19, image: "/gallery19.jpg", reason: "You deserve every good thing coming your way." },
+  { number: 20, image: "/gallery20.jpg", reason: "You are wonderfully unique." },
 
-  { number: 21, image: "/photo1.jpg", reason: "You remind people that kindness still exists." },
-  { number: 22, image: "/photo2.jpg", reason: "You make people feel valued." },
-  { number: 23, image: "/photo3.jpg", reason: "You are a gift to the people who know you." },
-  { number: 24, image: "/photo4.jpg", reason: "Because you're Abigail — and that's more than enough. ❤️" },
+  { number: 21, image: "/gallery21.jpg", reason: "You remind people that kindness still exists." },
+  { number: 22, image: "/gallery22.jpg", reason: "You make people feel valued." },
+  { number: 23, image: "/gallery23.jpg", reason: "You are a gift to the people who know you." },
+  { number: 24, image: "/gallery24.jpg", reason: "Because you're Abigail — and that's more than enough. ❤️" },
       ].map((item) => (
         <motion.div
   key={item.number}
@@ -665,7 +668,7 @@ const audioRef = useRef<HTMLAudioElement>(null);
         <img
           src={item.image}
           alt={`Photo ${item.number}`}
-          className="w-full h-72 object-cover"
+          className="w-full h-auto max-h-[500px] object-contain"
         />
 
         <div className="p-6 text-center">
@@ -737,42 +740,42 @@ const audioRef = useRef<HTMLAudioElement>(null);
       {[
         {
           image:
-            "https://images.unsplash.com/photo-1494790108377-be9c29b29330",
+           "/Photo1.jpg",
           title: "Your Beautiful Smile",
           caption:
             "One smile can brighten an entire day.",
         },
         {
           image:
-            "https://images.unsplash.com/photo-1517841905240-472988babdf9",
+            "/Photo2.jpg",
           title: "Pure Joy",
           caption:
             "A reminder that happiness looks good on you.",
         },
         {
           image:
-            "https://images.unsplash.com/photo-1524504388940-b1c1722653e1",
+            "/Photo3.jpg",
           title: "A Special Memory",
           caption:
             "Moments become memories, memories become treasures.",
         },
         {
           image:
-            "https://images.unsplash.com/photo-1488426862026-3ee34a7d66df",
+            "/Photo4.jpg",
           title: "Grace",
           caption:
             "There is beauty in simply being yourself.",
         },
         {
           image:
-            "https://images.unsplash.com/photo-1515886657613-9f3515b0c78f",
+            "/Photo5.jpg",
           title: "Another Chapter",
           caption:
             "Every year adds another beautiful page to your story.",
         },
         {
           image:
-            "https://images.unsplash.com/photo-1519345182560-3f2917c472ef",
+            "/Photo5.jpg",
           title: "Today",
           caption:
             "Celebrating twenty-four amazing years.",
@@ -989,160 +992,54 @@ const audioRef = useRef<HTMLAudioElement>(null);
   </div>
 </section>
 
-{/* VIDEO MESSAGE */}
 
-<section className="py-32 px-6 bg-[#FAF9F6]">
-  <div className="max-w-5xl mx-auto">
-    <motion.div
-      initial={{ opacity: 0 }}
-      whileInView={{ opacity: 1 }}
-      viewport={{ once: true }}
-      className="text-center mb-20"
-    >
-      <h2 className="text-5xl font-serif text-gray-800">
-        A Message From Me
-      </h2>
-
-      <p className="mt-6 text-gray-600">
-        Press play whenever you're ready ❤️
-      </p>
-    </motion.div>
-
-    <motion.div
-      initial={{ opacity: 0, y: 30 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true }}
-      className="bg-white rounded-3xl overflow-hidden shadow-lg"
-    >
-      <video
-        controls
-        className="w-full"
-        poster="/hero.jpg"
-      >
-        <source src="/birthday-message.mp4" type="video/mp4" />
-      </video>
-    </motion.div>
-  </div>
-</section>
 
 {/* FINAL LETTER */}
 
-<section className="py-32 px-6 bg-white">
-  <div className="max-w-4xl mx-auto">
-    <motion.div
-      initial={{ opacity: 0 }}
-      whileInView={{ opacity: 1 }}
-      viewport={{ once: true }}
-      className="text-center mb-16"
+{showSecret && !showHiddenMessage && (
+  <motion.div
+    initial={{ opacity: 0, y: 30 }}
+    animate={{ opacity: 1, y: 0 }}
+    className="mt-10 bg-[#FAF9F6] rounded-3xl p-10"
+  >
+    <h3 className="text-3xl font-serif text-[#C8A96A]">
+      You Found It ❤️
+    </h3>
+
+    <p className="mt-8 text-lg text-gray-700 leading-loose">
+      This wasn't part of the main gift.
+    </p>
+
+    <p className="mt-6 text-lg text-gray-700 leading-loose">
+      I just wanted one place on this website where I could say
+      something without trying to sound poetic.
+    </p>
+
+    <p className="mt-6 text-lg text-gray-700 leading-loose">
+      Thank you for being part of my life.
+    </p>
+
+    <p className="mt-6 text-lg text-gray-700 leading-loose">
+      Thank you for the smiles, the conversations, the memories,
+      and even the moments you probably think were insignificant.
+    </p>
+
+    <p className="mt-6 text-lg text-gray-700 leading-loose">
+      They weren't.
+    </p>
+
+    <p className="mt-8 text-2xl font-serif text-[#C8A96A]">
+      The world is better because you're in it.
+    </p>
+
+    <button
+      onClick={() => setShowHiddenMessage(true)}
+      className="mt-10 px-8 py-3 rounded-full bg-[#C8A96A] text-white"
     >
-      <h2 className="text-5xl font-serif text-gray-800">
-        One Last Thing...
-      </h2>
-    </motion.div>
-
-    <motion.div
-      initial={{ opacity: 0 }}
-      whileInView={{ opacity: 1 }}
-      viewport={{ once: true }}
-      className="bg-[#FAF9F6] rounded-3xl p-12 md:p-16"
-    >
-      <p className="text-lg leading-loose text-gray-700">
-        Abigail,
-      </p>
-
-      <p className="mt-8 text-lg leading-loose text-gray-700">
-        If you've made it this far,
-        thank you for taking this journey with me.
-      </p>
-
-      <p className="mt-6 text-lg leading-loose text-gray-700">
-        I wanted this website to be more than a birthday message.
-        I wanted it to be a reminder.
-      </p>
-
-      <p className="mt-6 text-lg leading-loose text-gray-700">
-        A reminder that your life matters.
-        Your dreams matter.
-        Your happiness matters.
-        And most importantly,
-        you matter.
-      </p>
-
-      <p className="mt-6 text-lg leading-loose text-gray-700">
-        Thank you for being yourself.
-        Thank you for your kindness.
-        Thank you for the memories.
-      </p>
-
-      <p className="mt-10 text-xl text-[#C8A96A]">
-        Happy Birthday ❤️
-      </p>
-    </motion.div>
-  </div>
-</section>
-
-{/* FINAL SURPRISE */}
-
-<section className="min-h-screen flex items-center justify-center px-6 bg-[#FAF9F6]">
-  <div className="text-center max-w-4xl">
-    {!showFinalMessage ? (
-      <>
-        <motion.h2
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          className="text-5xl md:text-7xl font-serif text-gray-800"
-        >
-          Your Final Gift 🎁
-        </motion.h2>
-
-        <p className="mt-8 text-xl text-gray-600">
-          There's one last message waiting for you.
-        </p>
-
-        <button
-          onClick={() => {
-            setShowFinalMessage(true);
-            setShowConfetti(true);
-          }}
-          className="mt-10 px-10 py-5 rounded-full bg-[#C8A96A] text-white text-lg"
-        >
-          Open Final Gift
-        </button>
-      </>
-    ) : (
-      <motion.div
-        initial={{ opacity: 0, scale: 0.8 }}
-        animate={{ opacity: 1, scale: 1 }}
-      >
-        <h1 className="text-6xl md:text-8xl font-serif text-[#C8A96A]">
-          Happy 24th Birthday
-        </h1>
-
-        <h2 className="mt-6 text-4xl md:text-6xl font-serif text-gray-800">
-          My Joy ❤️
-        </h2>
-
-        <p className="mt-10 text-xl text-gray-600 leading-relaxed max-w-3xl mx-auto">
-          If I could choose one thing for you this year,
-          it would be that you see yourself the way God sees you:
-          loved,
-          valuable,
-          beautiful,
-          capable,
-          and full of purpose.
-        </p>
-
-        <p className="mt-8 text-xl text-gray-600 leading-relaxed max-w-3xl mx-auto">
-          Never forget that.
-        </p>
-
-        <p className="mt-12 text-3xl font-serif text-[#C8A96A]">
-          — Samuel ❤️
-        </p>
-      </motion.div>
-    )}
-  </div>
-  </section>
+      One More Secret →
+    </button>
+  </motion.div>
+)}
 {/* SECRET HEART */}
 
 <section className="py-24 px-6 bg-white">
@@ -1204,6 +1101,81 @@ const audioRef = useRef<HTMLAudioElement>(null);
 
   </div>
 </section>
+{showHiddenMessage && (
+  <motion.div
+    initial={{ opacity: 0, scale: 0.9 }}
+    animate={{ opacity: 1, scale: 1 }}
+    className="mt-10 bg-[#FAF9F6] rounded-3xl p-10 text-center"
+  >
+    <h2 className="text-4xl font-serif text-[#C8A96A]">
+      🔒 AGE 25 LOCKED
+    </h2>
+
+    <p className="mt-8 text-lg text-gray-700">
+      Access Attempt Detected...
+    </p>
+
+    <p className="mt-4 text-lg text-gray-700">
+      Sorry Abigail 😌
+    </p>
+
+    <p className="mt-8 text-gray-600">
+      You're trying to access:
+    </p>
+
+    <p className="text-3xl font-serif text-gray-800 mt-3">
+      Abigail v25.0
+    </p>
+
+    <div className="mt-8">
+      <p className="text-gray-600">
+        Release Date:
+      </p>
+
+      <p className="font-semibold">
+        September 30, 2027
+      </p>
+    </div>
+
+    <div className="mt-6">
+      <p className="text-gray-600">
+        Current Status:
+      </p>
+
+      <p className="font-bold text-red-500">
+        NOT YET AVAILABLE
+      </p>
+    </div>
+
+    <div className="mt-10 border-t pt-8">
+      <h3 className="text-2xl font-serif text-[#C8A96A]">
+        ⚠ ERROR 2027
+      </h3>
+
+      <p className="mt-6 text-lg text-gray-700">
+        Age 25 is currently under development.
+      </p>
+
+      <p className="mt-4 text-lg text-gray-700">
+        The management has reviewed your request and has decided
+        that Abigail should remain 24 for now. 😌❤️
+      </p>
+    </div>
+
+    <div className="mt-10 border-t pt-8">
+      <p className="text-lg text-gray-700">
+        Please complete Age 24 before accessing Age 25. ❤️
+      </p>
+    </div>
+
+    <button
+      onClick={() => setShowHiddenMessage(false)}
+      className="mt-10 px-8 py-3 rounded-full bg-[#C8A96A] text-white"
+    >
+      ← Return To Age 24
+    </button>
+  </motion.div>
+)}
 {/* SIGNATURE */}
 
 <footer className="py-20 px-6 bg-[#FAF9F6] border-t">
