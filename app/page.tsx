@@ -1148,7 +1148,7 @@ const [showVideo, setShowVideo] = useState(false);
               className="w-full max-h-[70vh] mx-auto"
             >
               <source
-                src="/birthday-video.mp4"
+                src="/Ayomi-video.mp4"
                 type="video/mp4"
               />
 
