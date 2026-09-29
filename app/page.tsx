@@ -4,7 +4,7 @@ import { useRef } from "react";
 import { Music, Pause } from "lucide-react";
 import { useEffect, useState } from "react";
 import { Lock, Gift, Heart } from "lucide-react";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion } from "framer-motion";
 
 const PASSWORD = "LOVE";
 
@@ -14,15 +14,16 @@ const [openedCard, setOpenedCard] = useState<number | null>(null);
   const [attempts, setAttempts] = useState(0);
   const [showHint, setShowHint] = useState(false);
 const [showHiddenMessage, setShowHiddenMessage] = useState(false);
-  const [showFinalMessage, setShowFinalMessage] = useState(false);
 const [showConfetti, setShowConfetti] = useState(false);
+const [secretStep, setSecretStep] = useState(0);
 const [showSecret, setShowSecret] = useState(false);
 const [error, setError] = useState("");
   const [shake, setShake] = useState(false);
   const [unlocked, setUnlocked] = useState(false);
   const [showWelcome, setShowWelcome] = useState(false);
   const [isPlaying, setIsPlaying] = useState(false);
-const audioRef = useRef<HTMLAudioElement>(null);
+const [showVideo, setShowVideo] = useState(false);
+  const audioRef = useRef<HTMLAudioElement>(null);
   useEffect(() => {
     const stored = sessionStorage.getItem("abigail-birthday-unlocked");
 
@@ -97,13 +98,7 @@ const audioRef = useRef<HTMLAudioElement>(null);
       <main className="min-h-screen bg-[#FAF9F6] flex items-center justify-center px-6">
        
         {showConfetti && <Confetti />}
-        <audio
-  ref={audioRef}
-  loop
-  preload="auto"
->
-  <source src="/music.mp3" type="audio/mpeg" />
-  </audio>
+    
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{
@@ -221,7 +216,7 @@ const audioRef = useRef<HTMLAudioElement>(null);
     <Music className="text-[#C8A96A]" />
   )}
 </button>
-<motion.div
+<motion.div 
   initial={{ opacity: 0 }}
   animate={{ opacity: 1 }}
   transition={{ delay: 2 }}
@@ -347,8 +342,7 @@ const audioRef = useRef<HTMLAudioElement>(null);
             className="mt-16"
           >
             <img
-              src="https://images.unsplash.com/photo-1494790108377-be9c29b29330"
-              alt="Abigail"
+              src="ayoke.jpg"
               className="w-80 h-80 object-cover rounded-full mx-auto shadow-2xl"
             />
           </motion.div>
@@ -414,7 +408,7 @@ const audioRef = useRef<HTMLAudioElement>(null);
       </p>
 
       <p className="mt-10 text-xl text-[#C8A96A] font-medium">
-        — Samuel ❤️
+        Ayomide ❤️
       </p>
     </motion.div>
   </div>
@@ -775,7 +769,7 @@ const audioRef = useRef<HTMLAudioElement>(null);
         },
         {
           image:
-            "/Photo5.jpg",
+            "/Ayomi.jpg",
           title: "Today",
           caption:
             "Celebrating twenty-four amazing years.",
@@ -819,6 +813,7 @@ const audioRef = useRef<HTMLAudioElement>(null);
       <p className="text-3xl md:text-4xl font-serif text-[#C8A96A] leading-relaxed">
         "Some people pass through our lives and leave memories.
         Others leave footprints on our hearts."
+        Babe, yours is a footprints.
       </p>
     </motion.div>
   </div>
@@ -892,7 +887,7 @@ const audioRef = useRef<HTMLAudioElement>(null);
       className="bg-white rounded-3xl p-12 md:p-16 shadow-sm"
     >
       <p className="text-lg leading-loose text-gray-700">
-        Abigail,
+        Ayoke,
       </p>
 
       <p className="mt-8 text-lg leading-loose text-gray-700">
@@ -991,220 +986,348 @@ const audioRef = useRef<HTMLAudioElement>(null);
     </div>
   </div>
 </section>
-
-
-
-{/* FINAL LETTER */}
-
-{showSecret && !showHiddenMessage && (
-  <motion.div
-    initial={{ opacity: 0, y: 30 }}
-    animate={{ opacity: 1, y: 0 }}
-    className="mt-10 bg-[#FAF9F6] rounded-3xl p-10"
-  >
-    <h3 className="text-3xl font-serif text-[#C8A96A]">
-      You Found It ❤️
-    </h3>
-
-    <p className="mt-8 text-lg text-gray-700 leading-loose">
-      This wasn't part of the main gift.
-    </p>
-
-    <p className="mt-6 text-lg text-gray-700 leading-loose">
-      I just wanted one place on this website where I could say
-      something without trying to sound poetic.
-    </p>
-
-    <p className="mt-6 text-lg text-gray-700 leading-loose">
-      Thank you for being part of my life.
-    </p>
-
-    <p className="mt-6 text-lg text-gray-700 leading-loose">
-      Thank you for the smiles, the conversations, the memories,
-      and even the moments you probably think were insignificant.
-    </p>
-
-    <p className="mt-6 text-lg text-gray-700 leading-loose">
-      They weren't.
-    </p>
-
-    <p className="mt-8 text-2xl font-serif text-[#C8A96A]">
-      The world is better because you're in it.
-    </p>
-
-    <button
-      onClick={() => setShowHiddenMessage(true)}
-      className="mt-10 px-8 py-3 rounded-full bg-[#C8A96A] text-white"
-    >
-      One More Secret →
-    </button>
-  </motion.div>
-)}
-{/* SECRET HEART */}
+{/* =========================================================
+    BEFORE YOU LEAVE — FINAL JOURNEY
+========================================================= */}
 
 <section className="py-24 px-6 bg-white">
-  <div className="max-w-3xl mx-auto text-center">
+  <div className="max-w-4xl mx-auto text-center">
 
-    <p className="text-gray-400 mb-8">
-      Before you leave...
-    </p>
+    {/* STEP 0 — INTRO */}
+    {secretStep === 0 && (
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+      >
+        <p className="text-gray-400 mb-3">
+          Before you leave...
+        </p>
 
-    <button
-      onClick={() => setShowSecret(!showSecret)}
-      className="text-5xl hover:scale-125 transition-all duration-300"
-    >
-      ❤️
-    </button>
+        <p className="text-sm text-gray-400 italic mb-12">
+          I left a few little things here for you.
+        </p>
 
-    {showSecret && (
+        <button
+          onClick={() => setSecretStep(1)}
+          className="group flex flex-col items-center mx-auto"
+        >
+          <span className="text-6xl group-hover:scale-110 transition-all duration-300">
+            ❤️
+          </span>
+
+          <span className="mt-5 text-xl font-serif text-gray-700">
+            AYOMI...
+          </span>
+
+          <span className="mt-2 text-sm text-gray-400">
+            There's something I wrote for you.
+          </span>
+        </button>
+      </motion.div>
+    )}
+
+    {/* =====================================================
+        STEP 1 — POEM
+    ===================================================== */}
+
+    {secretStep === 1 && (
+      <motion.div
+        initial={{ opacity: 0, x: 30 }}
+        animate={{ opacity: 1, x: 0 }}
+        className="max-w-3xl mx-auto"
+      >
+        <div className="bg-[#FAF9F6] rounded-3xl p-8 md:p-12">
+
+          <p className="text-sm text-gray-400 mb-4">
+            For you...
+          </p>
+
+          <h3 className="text-3xl md:text-4xl font-serif text-[#C8A96A]">
+            For You, Ayomi ❤️
+          </h3>
+
+          <div className="mt-10 text-lg text-gray-700 leading-loose text-center">
+
+            <p>
+              You grow, you love,
+              <br />
+              you feel, you focus.
+            </p>
+
+            <p className="mt-6">
+              You're tender hearted.
+            </p>
+
+            <p className="mt-6">
+              You flow, you're solid.
+              <br />
+              You taste sweet.
+            </p>
+
+            <p className="mt-6">
+              You are like the sunflower,
+              <br />
+              always reaching for growth.
+            </p>
+
+            <p className="mt-6">
+              You are like honey,
+              <br />
+              and you're hospitable.
+            </p>
+
+            <p className="mt-6">
+              Your heart is a beauty.
+              <br />
+              Your presence is home.
+            </p>
+
+            <p className="mt-6">
+              You are her.
+              <br />
+              You are strong.
+              <br />
+              A safe haven.
+              <br />
+              AYOMIKE ❤️
+            </p>
+
+          </div>
+
+          <div className="mt-10">
+            <div className="w-16 h-px bg-[#C8A96A] mx-auto" />
+
+            <p className="mt-6 text-sm text-gray-400 italic">
+              I wrote this thinking of you as requested.
+            </p>
+          </div>
+
+        </div>
+
+        {/* NEXT */}
+        <button
+          onClick={() => setSecretStep(2)}
+          className="mt-10 inline-flex items-center gap-3 text-gray-500 hover:text-[#C8A96A] transition"
+        >
+          <span>Next</span>
+          <span className="text-xl">→</span>
+        </button>
+      </motion.div>
+    )}
+
+    {/* =====================================================
+        STEP 2 — MOVIE
+    ===================================================== */}
+
+    {secretStep === 2 && (
+      <motion.div
+        initial={{ opacity: 0, x: 30 }}
+        animate={{ opacity: 1, x: 0 }}
+        className="max-w-4xl mx-auto"
+      >
+        <div className="bg-[#FAF9F6] rounded-3xl p-6 md:p-10">
+
+          <p className="text-sm text-gray-400 mb-3">
+            And then...
+          </p>
+
+          <h3 className="text-3xl md:text-4xl font-serif text-[#C8A96A]">
+            A Little Movie For You 🎞️
+          </h3>
+
+          <p className="mt-4 text-gray-500 italic">
+            Just a little something made from the pieces of you I love.
+          </p>
+
+          {/* VIDEO */}
+          <div className="mt-8 overflow-hidden rounded-2xl shadow-lg bg-black">
+            <video
+              controls
+              playsInline
+              preload="metadata"
+              className="w-full max-h-[70vh] mx-auto"
+            >
+              <source
+                src="/birthday-video.mp4"
+                type="video/mp4"
+              />
+
+              Your browser does not support video playback.
+            </video>
+          </div>
+
+          {/* DOWNLOAD */}
+          <a
+            href="/Ayomi-video.mp4"
+            download="For-Abigail-With-Love.mp4"
+            className="mt-8 inline-flex items-center gap-2 justify-center px-8 py-3 rounded-full bg-[#C8A96A] text-white hover:opacity-90 transition"
+          >
+            ⬇️ Download Your Movie
+          </a>
+
+          <p className="mt-4 text-sm text-gray-400">
+            Keep this little piece of your birthday with you. ❤️
+          </p>
+
+        </div>
+
+        {/* NEXT */}
+        <button
+          onClick={() => setSecretStep(3)}
+          className="mt-10 inline-flex items-center gap-3 text-gray-500 hover:text-[#C8A96A] transition"
+        >
+          <span>There's one more thing</span>
+          <span className="text-xl">→</span>
+        </button>
+      </motion.div>
+    )}
+
+    {/* =====================================================
+        STEP 3 — DON'T CLICK THIS
+    ===================================================== */}
+
+    {secretStep === 3 && (
+      <motion.div
+        initial={{ opacity: 0, scale: 0.95 }}
+        animate={{ opacity: 1, scale: 1 }}
+        className="max-w-2xl mx-auto"
+      >
+        <p className="text-sm text-gray-400 mb-8">
+          Okay... one last thing.
+        </p>
+
+        <button
+          onClick={() => setSecretStep(4)}
+          className="group flex flex-col items-center mx-auto"
+        >
+          <span className="text-6xl group-hover:scale-110 transition-all duration-300">
+            🔒
+          </span>
+
+          <span className="mt-5 text-xl font-serif text-gray-700">
+            Don't Click This
+          </span>
+
+          <span className="mt-2 text-sm text-gray-400">
+            Seriously. 😌
+          </span>
+        </button>
+      </motion.div>
+    )}
+
+    {/* =====================================================
+        STEP 4 — AGE 25
+    ===================================================== */}
+
+    {secretStep === 4 && (
       <motion.div
         initial={{ opacity: 0, y: 30 }}
         animate={{ opacity: 1, y: 0 }}
-        className="mt-10 bg-[#FAF9F6] rounded-3xl p-10"
+        className="max-w-2xl mx-auto bg-[#FAF9F6] rounded-3xl p-8 md:p-12"
       >
-        <h3 className="text-3xl font-serif text-[#C8A96A]">
-          You Found It
-        </h3>
 
-        <p className="mt-8 text-lg text-gray-700 leading-loose">
-          This wasn't part of the main gift.
+        <h2 className="text-4xl font-serif text-[#C8A96A]">
+          🔒 AGE 25 LOCKED
+        </h2>
+
+        <p className="mt-8 text-lg text-gray-700">
+          Access Attempt Detected...
         </p>
 
-        <p className="mt-6 text-lg text-gray-700 leading-loose">
-          I just wanted one place on this website
-          where I could say something without
-          trying to sound poetic.
+        <p className="mt-4 text-lg text-gray-700">
+          Sorry Babe 😌
         </p>
 
-        <p className="mt-6 text-lg text-gray-700 leading-loose">
-          Thank you for being part of my life.
+        <p className="mt-8 text-gray-600">
+          You're trying to access:
         </p>
 
-        <p className="mt-6 text-lg text-gray-700 leading-loose">
-          Thank you for the smiles,
-          the conversations,
-          the memories,
-          and even the moments you probably think
-          were insignificant.
+        <p className="text-3xl font-serif text-gray-800 mt-3">
+          Abigail v25.0
         </p>
 
-        <p className="mt-6 text-lg text-gray-700 leading-loose">
-          They weren't.
-        </p>
+        <div className="mt-8">
+          <p className="text-gray-600">
+            Release Date:
+          </p>
 
-        <p className="mt-8 text-2xl font-serif text-[#C8A96A]">
-          The world is better because you're in it.
-        </p>
+          <p className="font-semibold">
+            September 30, 2027
+          </p>
+        </div>
+
+        <div className="mt-6">
+          <p className="text-gray-600">
+            Current Status:
+          </p>
+
+          <p className="font-bold text-red-500">
+            NOT YET AVAILABLE
+          </p>
+        </div>
+
+        <div className="mt-10 border-t pt-8">
+          <h3 className="text-2xl font-serif text-[#C8A96A]">
+            ⚠ ERROR 2027
+          </h3>
+
+          <p className="mt-6 text-lg text-gray-700">
+            Age 25 is currently under development.
+          </p>
+
+          <p className="mt-4 text-lg text-gray-700">
+            The management has reviewed your request and has decided
+            that Abigail should remain 24 for now. 😌❤️
+          </p>
+        </div>
+
+        <div className="mt-10 border-t pt-8">
+          <p className="text-lg text-gray-700">
+            Please complete Age 24 before accessing Age 25. ❤️
+          </p>
+        </div>
+
+        <button
+          onClick={() => setSecretStep(0)}
+          className="mt-10 px-8 py-3 rounded-full bg-[#C8A96A] text-white hover:opacity-90 transition"
+        >
+          ← Return
+        </button>
 
       </motion.div>
     )}
 
   </div>
 </section>
-{showHiddenMessage && (
-  <motion.div
-    initial={{ opacity: 0, scale: 0.9 }}
-    animate={{ opacity: 1, scale: 1 }}
-    className="mt-10 bg-[#FAF9F6] rounded-3xl p-10 text-center"
-  >
-    <h2 className="text-4xl font-serif text-[#C8A96A]">
-      🔒 AGE 25 LOCKED
-    </h2>
 
-    <p className="mt-8 text-lg text-gray-700">
-      Access Attempt Detected...
-    </p>
 
-    <p className="mt-4 text-lg text-gray-700">
-      Sorry Abigail 😌
-    </p>
-
-    <p className="mt-8 text-gray-600">
-      You're trying to access:
-    </p>
-
-    <p className="text-3xl font-serif text-gray-800 mt-3">
-      Abigail v25.0
-    </p>
-
-    <div className="mt-8">
-      <p className="text-gray-600">
-        Release Date:
-      </p>
-
-      <p className="font-semibold">
-        September 30, 2027
-      </p>
-    </div>
-
-    <div className="mt-6">
-      <p className="text-gray-600">
-        Current Status:
-      </p>
-
-      <p className="font-bold text-red-500">
-        NOT YET AVAILABLE
-      </p>
-    </div>
-
-    <div className="mt-10 border-t pt-8">
-      <h3 className="text-2xl font-serif text-[#C8A96A]">
-        ⚠ ERROR 2027
-      </h3>
-
-      <p className="mt-6 text-lg text-gray-700">
-        Age 25 is currently under development.
-      </p>
-
-      <p className="mt-4 text-lg text-gray-700">
-        The management has reviewed your request and has decided
-        that Abigail should remain 24 for now. 😌❤️
-      </p>
-    </div>
-
-    <div className="mt-10 border-t pt-8">
-      <p className="text-lg text-gray-700">
-        Please complete Age 24 before accessing Age 25. ❤️
-      </p>
-    </div>
-
-    <button
-      onClick={() => setShowHiddenMessage(false)}
-      className="mt-10 px-8 py-3 rounded-full bg-[#C8A96A] text-white"
-    >
-      ← Return To Age 24
-    </button>
-  </motion.div>
-)}
-{/* SIGNATURE */}
+{/* =========================================================
+    SIGNATURE
+========================================================= */}
 
 <footer className="py-20 px-6 bg-[#FAF9F6] border-t">
   <div className="max-w-4xl mx-auto text-center">
 
     <p className="text-gray-600 leading-loose">
-      Created with love,
-      prayers,
-      memories,
-      gratitude,
+      Created with love, prayers, memories, gratitude,
       and a heart full of appreciation.
     </p>
 
     <p className="mt-8 text-xl text-[#C8A96A] font-serif">
-      For Abigail's 24th Birthday ❤️
+      For Boluwatife 24th Birthday ❤️
     </p>
 
     <p className="mt-4 text-gray-500">
-      August 2026
+      September 30th, 2026
     </p>
 
     <div className="w-24 h-px bg-[#C8A96A] mx-auto my-10" />
 
     <p className="text-3xl font-serif text-gray-800">
-      — Samuel
+      Yours Loyal Temi ❤️
     </p>
 
   </div>
 </footer>
-    </main>
-  );
-}
+</main>
+  )}
