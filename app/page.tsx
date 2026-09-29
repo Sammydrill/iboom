@@ -1089,7 +1089,7 @@ const [showVideo, setShowVideo] = useState(false);
               <br />
               A safe haven.
               <br />
-              AYOMIKE ❤️
+              AYOKEMI ❤️
             </p>
 
           </div>
