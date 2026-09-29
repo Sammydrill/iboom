@@ -813,7 +813,7 @@ const [showVideo, setShowVideo] = useState(false);
       <p className="text-3xl md:text-4xl font-serif text-[#C8A96A] leading-relaxed">
         "Some people pass through our lives and leave memories.
         Others leave footprints on our hearts."
-        Babe, yours is a footprints.
+        Babe, yours is a footprint to my heart.
       </p>
     </motion.div>
   </div>
